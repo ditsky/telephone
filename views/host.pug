@@ -4,21 +4,23 @@ block content
   h1.center Create a server:
 
   .jumbotron
-    .input-group.input-group-sm.mb-3
-      .input-group-prepend
-        span#inputGroup-sizing-sm.input-group-text Room Name:
-      input.form-control(type='text' aria-label='Small' aria-describedby='inputGroup-sizing-sm')
-    .input-group.input-group-sm.mb-3
-      .input-group-prepend
-        span#inputGroup-sizing-sm.input-group-text Room Password:
-      input.form-control(type='text' aria-label='Small' aria-describedby='inputGroup-sizing-sm')
-    .input-group.input-group-sm.mb-3
-      .input-group-prepend
-        span#inputGroup-sizing-sm.input-group-text Player name:
-      input.form-control(type='text' aria-label='Small' aria-describedby='inputGroup-sizing-sm')
-    .input-group.input-group-sm.mb-3
-      .input-group-prepend
-        span#inputGroup-sizing-sm.input-group-text # of Players:
-      input.form-control(type='text' aria-label='Small' aria-describedby='inputGroup-sizing-sm')
-    .div.text-center
-      a.button.btn.btn-primary(type='button' href="/lobby") Confirm
+    form(method="post")
+      .input-group.input-group-sm.mb-3
+        .input-group-prepend
+          span#inputGroup-sizing-sm.input-group-text Room Name:
+        input.form-control(type='text' name="roomname" aria-label='Small' aria-describedby='inputGroup-sizing-sm')
+      .input-group.input-group-sm.mb-3
+        .input-group-prepend
+          span#inputGroup-sizing-sm.input-group-text Room Password:
+        input.form-control(type='text' name="password" aria-label='Small' aria-describedby='inputGroup-sizing-sm')
+      .input-group.input-group-sm.mb-3
+        .input-group-prepend
+          span#inputGroup-sizing-sm.input-group-text Player name:
+        input.form-control(type='text' name="playername" aria-label='Small' aria-describedby='inputGroup-sizing-sm')
+      .input-group.input-group-sm.mb-3
+        .input-group-prepend
+          span#inputGroup-sizing-sm.input-group-text # of Players:
+        input.form-control(type='text' name="numplayers" aria-label='Small' aria-describedby='inputGroup-sizing-sm')
+      .text-center
+        input(onclick="window.location.href = '/lobby';" type="submit")
+        //a.input(type="submit" href="/lobby") Confirm

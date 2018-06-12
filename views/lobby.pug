@@ -1,17 +1,20 @@
 extends layoutBS
 
 block content
-
+  h1 #{roomname}
+  p1 players:#{numplayers}
+  p1 password:#{password}
+  hr
   .div.jumbotron
     table(border="5" width="100%")
       thead
         tr
-          td P1
+          td #{pname}
         tr
           td P2
         tr
           td P3
         tr
           td P4
-
-  button.btn.btn-primary(type='button') Start Game
+  .text-center
+    button.btn.btn-primary(type='button') Start Game
