@@ -11,3 +11,27 @@ a {
     text-align: center;
     padding-top: 1in;
 }
+
+.larger{
+    text-align: center;
+    font-size: 16pt;
+    padding-top: 0.3in;
+    column-rule-color: black;
+}
+
+.red {
+  background-color:red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+  color:white;
+}
+
+.div {
+    padding-top: 50px;
+}
