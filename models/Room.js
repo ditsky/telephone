@@ -1,4 +1,18 @@
-class Room{
+'use strict';
+const mongoose = require( 'mongoose' );
+
+var roomSchema = mongoose.Schema( {
+  name: String,
+  password: String,
+  numplayers: String
+} );
+
+module.exports = mongoose.model( 'Room', roomSchema );
+
+
+
+
+/*class Room{
   constructor(roomname, password, numplayers){
     this.roomname=roomname
     this.password=password
@@ -10,4 +24,4 @@ class Room{
   }
 }
 
-module.exports = Room
+module.exports = Room*/

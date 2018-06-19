@@ -18,3 +18,11 @@ block content
           td P4
   .text-center
     button.btn.btn-primary(type='button') Start Game
+
+
+
+    ol
+      each player in players
+        li
+          e #{player.name} --
+          //i #{player}      

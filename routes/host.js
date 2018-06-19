@@ -24,7 +24,7 @@ router.post('/', function(req, res, next) {
   let host = new Host(req.body.playername)
   console.log(room)
   console.log(host)*/
-  res.render('lobby', { roomname:req.body.roomname, password:req.body.password, pname:req.body.playername, numplayers:req.body.numplayers });
+  res.render('players', { roomname:req.body.roomname, password:req.body.password, pname:req.body.playername, numplayers:req.body.numplayers });
 });
 
 
