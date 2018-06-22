@@ -4,7 +4,7 @@ block content
   h1.center Create a server:
 
   .jumbotron
-    form(method="post" action="saveRoom")
+    form(method="post" action="saveGame")
       .input-group.input-group-sm.mb-3
         .input-group-prepend
           span#inputGroup-sizing-sm.input-group-text Room Name:
@@ -17,13 +17,9 @@ block content
         .input-group-prepend
           span#inputGroup-sizing-sm.input-group-text # of Players:
         input.form-control(type='text' name="numplayers" aria-label='Small' aria-describedby='inputGroup-sizing-sm')
-    
-    form(method="post" action="savePlayer")
       .input-group.input-group-sm.mb-3
         .input-group-prepend
           span#inputGroup-sizing-sm.input-group-text Player name:
-        input.form-control(type='text' name="playername" aria-label='Small' aria-describedby='inputGroup-sizing-sm')
+        input.form-control(type='text' name="hostname" aria-label='Small' aria-describedby='inputGroup-sizing-sm')
       .text-center
         input(type="submit")
-    
-        //a.input(type="submit" href="/lobby") Confirm

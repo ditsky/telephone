@@ -1,9 +1,14 @@
 extends layoutBS
 
 block content
-  h1 #{roomname}
-  p1 players:#{numplayers}
-  p1 password:#{password}
+  
+  ol
+    each game in games
+      li
+        e games: #{game.roomname} --
+        e numplayers: #{game.numplayers} --
+        e password:#{game.password} --
+        e players:#{game.hostname} --
   hr
   .div.jumbotron
     table(border="5" width="100%")
@@ -18,11 +23,3 @@ block content
           td P4
   .text-center
     a.button.btn.btn-primary(type='button' href="/phrasebuilder") Start Game
-
-
-
-    ol
-      each player in players
-        li
-          e #{player.name} --
-          //i #{player}      

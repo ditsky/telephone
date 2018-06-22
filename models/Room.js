@@ -5,7 +5,7 @@ var roomSchema = mongoose.Schema( {
   name: String,
   password: String,
   numplayers: String,
-  players: []
+  //players: []
 } );
 
 module.exports = mongoose.model( 'Room', roomSchema );

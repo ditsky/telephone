@@ -8,13 +8,19 @@ html(lang="en")
     link(rel='stylesheet', href='/stylesheets/style.css')
     block head
   body.light
-    ul.nav.navbar-light.bg-light.bordered
+    ul.nav.navbar-dark.bg-warning.bordered
         li.nav-item
-          a.nav-link.active(href="/") Home
+          a.text-primary.nav-link.active(href="/") Home
         li.nav-item
-          a.nav-link.active(href="/host") Host Game
+          a.text-primary.nav-link.active(href="/host") Host Game
         li.nav-item
-          a.nav-link.active(href="/join") Join Game
+          a.text-primary.nav-link.active(href="/join") Join Game
+        if loggedIn
+          li.nav-item
+            a.text-primary.nav-link.active(href="/logout") Logout
+        else
+          li.nav-item
+            a.text-danger.nav-link.active(href="/login") Login
     block content
     script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous")
