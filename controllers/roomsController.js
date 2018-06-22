@@ -9,7 +9,7 @@ exports.getAllRooms = ( req, res ) => {
   player.find( {} )
     .exec()
     .then( ( rooms ) => {
-      res.render( 'rooms', {
+      res.render( 'players', {
         rooms: rooms
       } );
     } )
@@ -22,7 +22,7 @@ exports.getAllRooms = ( req, res ) => {
     } );
 };
 
-exports.savePlayer = ( req, res ) => {
+exports.saveRoom = ( req, res ) => {
   console.log("in saveRoom!")
   console.dir(req)
   let newRoom = new Room( {

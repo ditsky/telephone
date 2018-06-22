@@ -1,0 +1,22 @@
+extends layoutBS
+
+block content
+  h1.center= Phrasebuilder
+  p.center Please enter a phrase to inspire a story:
+  form(method="post")
+    .form-group
+      label(for='exampleFormControlTextarea1') Enter Phrase
+      textarea#exampleFormControlTextarea1.form-control(rows='3')
+      .text-center
+        input(type="submit")
+  
+  
+  
+  
+  
+  //3 word phrase
+  //drawing
+  //story inspired by phrase and drawing
+  //The spy has to retell story with either phrase or drawing but not both
+  //everyone else gets both
+  //vote on stories based on who everyone thinks the spy is, and the most entertaining story get points

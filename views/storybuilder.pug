@@ -1,0 +1,26 @@
+extends layoutBS
+
+block content
+  h1.center= Storybuilding
+  p.center Please write your story inspired by the phrase:
+  ol
+    each phrase in phrases
+      li
+        e #{phrase.phrase} --
+  form(method="post" action="saveStory")
+    .form-group
+      label(for='exampleFormControlTextarea1') Enter Story
+      textarea#exampleFormControlTextarea1.form-control(rows='3' name='story' author="the boy")
+      .text-center
+        input(type="submit")
+  
+  
+  
+  //input#exampleFormControlInput1.form-control(type='email' placeholder='name@example.com')
+  
+  //3 word phrase
+  //drawing
+  //story inspired by phrase and drawing
+  //The spy has to retell story with either phrase or drawing but not both
+  //everyone else gets both
+  //vote on stories based on who everyone thinks the spy is, and the most entertaining story get points

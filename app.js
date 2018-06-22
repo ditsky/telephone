@@ -7,6 +7,8 @@ const
   logger = require('morgan');
   playersController = require('./controllers/playersController')
   roomsController = require('./controllers/roomsController')
+  phrasesController = require('./controllers/phrasesController')
+  storiesController = require('./controllers/storiesController')
   mongoose = require( 'mongoose' );
 
 var indexRouter = require('./routes/index');/*
@@ -48,7 +50,12 @@ app.use('/lobby', lobbyRouter);*/
 //console.dir(playersController.getAllplayers)
 //console.dir(playersCntroller)
 app.get('/players', playersController.getAllPlayers );
-app.post('/savePlayer', playersController.savePlayer );/*
+app.post('/savePlayer', playersController.savePlayer );
+app.get('/storybuilder', phrasesController.getAllPhrases );
+app.post('/savePhrase', phrasesController.savePhrase );
+app.get('/voting', storiesController.getAllStories );
+app.post('/saveStory', storiesController.saveStory );
+/*
 app.get('/rooms', roomsController.getAllRooms );
 app.post('/saveRoom', roomsController.saveRoom);*/
 
@@ -62,6 +69,22 @@ app.use('/join', function(req, res, next) {
   console.log("in /join controller")
   res.render('join');
 });
+
+app.use('/phrasebuilder', function(req, res, next) {
+  console.log("in /phrasebuilder controller")
+  res.render('phrasebuilder');
+});
+
+app.use('/storybuilder', function(req, res, next) {
+  console.log("in /storybuilder controller")
+  res.render('storybuilder');
+});
+
+app.use('/voting', function(req, res, next) {
+  console.log("in /voting controller")
+  res.render('voting');
+});
+
 
 
 // catch 404 and forward to error handler

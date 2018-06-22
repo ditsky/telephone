@@ -9,7 +9,16 @@ a {
 
 .center {
     text-align: center;
+}
+
+.hanglow {
     padding-top: 1in;
+}
+
+.bordered {
+    border: 3px solid #FCB326;
+    border-radius: 6px;
+    color: #EFEFD0;
 }
 
 .larger{
@@ -17,6 +26,18 @@ a {
     font-size: 16pt;
     padding-top: 0.3in;
     column-rule-color: black;
+}
+
+.or {
+  color: #FF6B35;
+}
+
+.pale {
+  background-color: #F7C59F;
+}
+
+.light {
+  background-color: #EFEFD0;
 }
 
 .red {
