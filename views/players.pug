@@ -14,7 +14,8 @@ block content
     table(border="5" width="100%")
       thead
         tr
-          td #
+          each game in games
+            td #{game.hostname}
         tr
           td P2
         tr
