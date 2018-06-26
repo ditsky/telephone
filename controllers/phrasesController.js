@@ -1,5 +1,5 @@
 'use strict';
-const Phrase = require( '../models/phrase' );
+const Phrase = require( '../models/Phrase' );
 console.log("loading the phrase Controller")
 
 

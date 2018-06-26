@@ -1,5 +1,5 @@
 'use strict';
-const Story = require( '../models/story' );
+const Story = require( '../models/Story' );
 console.log("loading the story Controller")
 
 

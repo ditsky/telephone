@@ -1,5 +1,5 @@
 'use strict';
-const Game = require( '../models/game' );
+const Game = require( '../models/Game' );
 console.log("loading the games Controller")
 
 
