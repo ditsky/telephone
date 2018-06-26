@@ -1,5 +1,5 @@
 'use strict';
-const Room = require( '../models/Room' );
+const Room = require( '../models/room' );
 console.log("loading the room Controller")
 
 
