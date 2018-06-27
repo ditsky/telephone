@@ -7,6 +7,11 @@ a {
   color: #00B7FF;
 }
 
+.blurry-text {
+   color: transparent;
+   text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
 .center {
     text-align: center;
 }
@@ -23,7 +28,7 @@ a {
 
 .larger{
     text-align: center;
-    font-size: 16pt;
+    font-size: 28pt;
     padding-top: 0.3in;
     column-rule-color: black;
 }
@@ -51,7 +56,7 @@ a {
 
 .bb {
   background-color: #1A659E;
-  color:#004E89;
+  //color:#004E89;
 }
 
 .blue {
