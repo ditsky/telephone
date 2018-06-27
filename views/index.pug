@@ -1,6 +1,23 @@
 extends layoutBS
 
 block content
-  h1.display-3.center.hanglow=title
-  .jumbotron.bb
-    p.center.or Welcome to the #{title} game!
+  //h1.display-3.center.hanglow.or=title
+  br
+  .jumbotron
+    p.center.or.larger Welcome to #{title}!
+    hr
+    p.or.center A fun storybuilding, deception game
+    
+  h2.or About: 
+    br
+    p3.or The game consists of at least three players to fill the main roles:
+      ol
+        li The poet
+        li The artist
+        li The spy
+    hr
+    p3.or The game starts with the poet writing a short phrase, and the artist drawing a picture. Then the everyone, including the spy, has to write a story. The stories are based on the picture and the phrase, but the spy only receives one or the other.
+    hr
+    p1.or Each player gets points for correctly choosing the spy's story and for being chosen as writing the most entertaining story.
+    
+    

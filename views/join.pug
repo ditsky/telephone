@@ -3,19 +3,19 @@ extends layoutBS
 block content
   h1.center Join a server:
 
-  .jumbotron
+  .jumbotron.pale
     form(method="post" action="saveGame")
       .input-group.input-group-sm.mb-3
         .input-group-prepend
-          span#inputGroup-sizing-sm.input-group-text Room Name:
+          span#inputGroup-sizing-sm.input-group-text.text-primary Room Name:
         input.form-control(type='text' name="roomname" aria-label='Small' aria-describedby='inputGroup-sizing-sm')
       .input-group.input-group-sm.mb-3
         .input-group-prepend
-          span#inputGroup-sizing-sm.input-group-text Room Password:
+          span#inputGroup-sizing-sm.input-group-text.text-primary Room Password:
         input.form-control(type='text' name="password" aria-label='Small' aria-describedby='inputGroup-sizing-sm')
       .input-group.input-group-sm.mb-3
         .input-group-prepend
-          span#inputGroup-sizing-sm.input-group-text Player name:
+          span#inputGroup-sizing-sm.input-group-text.text-primary Player name:
         input.form-control(type='text' name="hostname" aria-label='Small' aria-describedby='inputGroup-sizing-sm')
       .text-center
         input(type="submit")
