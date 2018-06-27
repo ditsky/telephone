@@ -15,13 +15,14 @@ var http = require("http").Server(app)
 var io = require("socket.io")(http)
 var indexRouter = require('./routes/index');
 
+/*
 io.on("connection", (socket) => {
     console.log("Socket is connected...")
 })
 
 var server = http.listen(5000, () => {
     console.log("Well done, now I am listening on ", server.address().port)
-})
+})*/
 
  // here we set up authentication with passport
  const session = require("express-session")
