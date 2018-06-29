@@ -1,11 +1,11 @@
 'use strict';
 const Game = require( '../models/game' );
-console.log("loading the games Controller")
+//console.log("loading the games Controller")
 
 
 // this displays all of the players
 exports.getAllGames = ( req, res ) => {
-  console.log('in getAllgames')
+  //console.log('in getAllgames')
   Game.find( {} )
     .exec()
     .then( ( games ) => {
@@ -18,12 +18,12 @@ exports.getAllGames = ( req, res ) => {
       return [];
     } )
     .then( () => {
-      console.log( 'game promise complete' );
+      //console.log( 'game promise complete' );
     } );
 };
 
 exports.saveGame = ( req, res ) => {
-  console.log("in saveGame!")
+  //console.log("in saveGame!")
   //console.dir(req)
   let newGame = new Game( {
     roomname: req.body.roomname,

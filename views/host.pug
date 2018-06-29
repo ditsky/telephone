@@ -3,7 +3,7 @@ extends layoutBS
 block content
   h1.center Create a server:
 
-  .jumbotron.pale
+  .jumbotron
     form(method="post" action="saveGame")
       .input-group.input-group-sm.mb-3
         .input-group-prepend
@@ -23,3 +23,22 @@ block content
         input.form-control(type='text' name="hostname" aria-label='Small' aria-describedby='inputGroup-sizing-sm')
       .text-center
         input(type="submit")
+  script(src='/jquery/dist/jquery.js')
+  script(src='/socket.io/socket.io.js')
+  script.
+    var socket = io.connect('http://localhost:5400');
+  
+//-script(src='https://cdn.socket.io/socket.io-1.2.0.js')
+  script.
+    $(function () {
+      var socket = io();
+      $('form').submit(function(){
+        socket.emit('chat message', $('#m').val());
+        $('#m').val('');
+        return false;
+      });
+      socket.on('chat message', function(msg){
+        $('#messages').append($('<li>').text(msg));
+        window.scrollTo(0, document.body.scrollHeight);
+      });
+    });

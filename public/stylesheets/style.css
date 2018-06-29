@@ -21,7 +21,7 @@ a {
 }
 
 .bordered {
-    border: 3px solid #004E89;
+    border: 1px solid #004E89;
     border-radius: 6px;
     color: #EFEFD0;
 }
@@ -29,12 +29,12 @@ a {
 .larger{
     text-align: center;
     font-size: 28pt;
-    padding-top: 0.3in;
+    //padding-top: 0.3in;
     column-rule-color: black;
 }
 
 .or {
-  color: blue;
+  color: #131112;
   //background-color: #F7C59F;
 }
 
@@ -43,7 +43,7 @@ a {
 }
 
 .light {
-  background-color: #EFEFD0;
+  background-color: #F7F7FF;
 }
 
 .red {
@@ -55,8 +55,8 @@ a {
 }
 
 .bb {
-  background-color: #1A659E;
-  background: none;
+  background-color: #279AF1;
+  //background: none;
   //color:#004E89;
 }
 

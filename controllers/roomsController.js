@@ -1,6 +1,6 @@
 'use strict';
 const Room = require( '../models/room' );
-console.log("loading the room Controller")
+//console.log("loading the room Controller")
 
 
 // this displays all of the players

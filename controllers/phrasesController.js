@@ -1,6 +1,6 @@
 'use strict';
 const Phrase = require( '../models/phrase' );
-console.log("loading the phrase Controller")
+//console.log("loading the phrase Controller")
 
 
 // this displays all of the players

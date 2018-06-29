@@ -3,23 +3,24 @@ extends layoutBS
 block content
   h1.center= Voting
   p.center Please pick the story you think was written by the spy and your favorite story
-  form(method="post")
-    .form-group
-      label(for='exampleFormControlSelect2') The Spy's Story:
-      select#exampleFormControlSelect2.form-control(multiple='')
-        - var num=1
-        each story in stories
-          option #{num}. #{story.story}
-          - num++
-    .form-group
-      label(for='exampleFormControlSelect2') Your Favorite Story:
-      select#exampleFormControlSelect2.form-control(multiple='')
-        - var num=1
-        each story in stories
-          option #{num}. #{story.story}
-          - num++
-    .text-center
-      input(type="submit")
+  .jumbotron
+    form(method="post")
+      .form-group
+        label(for='exampleFormControlSelect2') The Spy's Story:
+        select#exampleFormControlSelect2.form-control(multiple='')
+          - var num=1
+          each story in stories
+            option #{num}. #{story.story}
+            - num++
+      .form-group
+        label(for='exampleFormControlSelect2') Your Favorite Story:
+        select#exampleFormControlSelect2.form-control(multiple='')
+          - var num=1
+          each story in stories
+            option #{num}. #{story.story}
+            - num++
+      .text-center
+        input(type="submit")
 
       
       

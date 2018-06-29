@@ -3,12 +3,13 @@ extends layoutBS
 block content
   h1.center= Phrasebuilder
   p.center Please enter a phrase to inspire a story:
-  form(method="post" action="savePhrase")
-    .form-group
-      label(for='exampleFormControlTextarea1') Enter Phrase
-      textarea#exampleFormControlTextarea1.form-control(rows='1' name='phrase' author="the boy")
-      .text-center
-        input(type="submit")
+  .jumbotron
+    form(method="post" action="savePhrase")
+      .form-group
+        label(for='exampleFormControlTextarea1') Enter Phrase
+        textarea#exampleFormControlTextarea1.form-control(rows='1' name='phrase' author="the boy")
+        .text-center
+          input(type="submit")
   
   
   

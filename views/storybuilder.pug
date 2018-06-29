@@ -7,13 +7,14 @@ block content
     each phrase in phrases
       li
         e #{phrase.phrase} --
-  form(method="post" action="saveStory")
-    .form-group
-      label(for='exampleFormControlTextarea1') Enter Story
-      textarea#exampleFormControlTextarea1.form-control(rows='3' name='story' author="the boy")
-      .text-center
-        input(type="submit")
-  
+  .jumbotron
+    form(method="post" action="saveStory")
+      .form-group
+        label(for='exampleFormControlTextarea1') Enter Story
+        textarea#exampleFormControlTextarea1.form-control(rows='3' name='story' author="the boy")
+        .text-center
+          input(type="submit")
+    
   
   
   //input#exampleFormControlInput1.form-control(type='email' placeholder='name@example.com')

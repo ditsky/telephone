@@ -1,6 +1,6 @@
 'use strict';
 const Player = require( '../models/player' );
-console.log("loading the player Controller")
+//console.log("loading the player Controller")
 
 
 // this displays all of the players

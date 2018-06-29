@@ -10,19 +10,7 @@ const
   storiesController = require('./controllers/storiesController')
   mongoose = require( 'mongoose' );
 
-
-var http = require("http").Server(app)
-var io = require("socket.io")(http)
 var indexRouter = require('./routes/index');
-
-/*
-io.on("connection", (socket) => {
-    console.log("Socket is connected...")
-})
-
-var server = http.listen(5000, () => {
-    console.log("Well done, now I am listening on ", server.address().port)
-})*/
 
  // here we set up authentication with passport
  const session = require("express-session")
@@ -30,8 +18,17 @@ var server = http.listen(5000, () => {
  const configPassport = require('./config/passport')
  configPassport(passport)
 
-
 var app = express();
+
+
+/*
+io.on("connection", (socket) => {
+    console.log("Socket is connected...")
+})
+
+var server = http.listen(5400, () => {
+    console.log("Well done, now I am listening on ", server.address().port)
+})*/
 
 mongoose.connect( 'mongodb://localhost/Telephone' );
 const db = mongoose.connection;
@@ -129,27 +126,27 @@ app.post('/saveRoom', roomsController.saveRoom);*/
 
 
 app.use('/host', function(req, res, next) {
-  console.log("in /host controller")
+  //console.log("in /host controller")
   res.render('host');
 });
 
 app.use('/join', function(req, res, next) {
-  console.log("in /join controller")
+//  console.log("in /join controller")
   res.render('join');
 });
 
 app.use('/phrasebuilder', function(req, res, next) {
-  console.log("in /phrasebuilder controller")
+  //console.log("in /phrasebuilder controller")
   res.render('phrasebuilder');
 });
 
 app.use('/storybuilder', function(req, res, next) {
-  console.log("in /storybuilder controller")
+  //console.log("in /storybuilder controller")
   res.render('storybuilder');
 });
 
 app.use('/voting', function(req, res, next) {
-  console.log("in /voting controller")
+  //console.log("in /voting controller")
   res.render('voting');
 });
 

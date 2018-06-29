@@ -1,6 +1,6 @@
 'use strict';
 const Story = require( '../models/story' );
-console.log("loading the story Controller")
+//console.log("loading the story Controller")
 
 
 // this displays all of the players
